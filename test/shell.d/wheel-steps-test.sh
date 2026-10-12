@@ -57,6 +57,7 @@ const handlers = [
 for (const file of handlers) {
   const source = fs.readFileSync(path.join(root, file), 'utf8').replace(/^\s*\/\/.*$/gm, '')
   assert(/Util\.wheelSteps\(root\.wheelAccumulator, /.test(source), `${file} steps the wheel through wheelSteps`)
+  assert(/var (\w+) = Util\.wheelSteps\(root\.wheelAccumulator, .*\n\s*root\.wheelAccumulator = \1\.remainder\n/.test(source), `${file} carries the wheel remainder to the next event`)
   assert(!/angleDelta\.y [<>] 0/.test(source), `${file} does not step on the sign of each wheel event`)
 }
 JS
