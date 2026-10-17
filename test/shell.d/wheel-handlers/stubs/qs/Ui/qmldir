@@ -11,4 +11,5 @@ PanelSeparator 1.0 PanelSeparator.qml
 PanelSlider 1.0 PanelSlider.qml
 PanelToolTip 1.0 PanelToolTip.qml
 PopupCard 1.0 PopupCard.qml
+SizedImage 1.0 SizedImage.qml
 TextField 1.0 TextField.qml
